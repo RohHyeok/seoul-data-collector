@@ -5,16 +5,19 @@ on:
     - cron: '0 * * * *'
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # 🔥 이거 추가
+
 jobs:
   collect:
     runs-on: ubuntu-latest
 
     steps:
       - name: 코드 가져오기
-        uses: actions/checkout@v4   # 🔥 변경
+        uses: actions/checkout@v4
 
       - name: Python 설치
-        uses: actions/setup-python@v5   # 🔥 변경
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
