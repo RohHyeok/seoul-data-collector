@@ -1,4 +1,4 @@
-name: Seoul Data Collector
+name: Seoul-Data-Collector
 
 on:
   schedule:
